@@ -1,9 +1,9 @@
-# AVR_Interfacing_Cmake 
+# AVR_Interfacing_CMake 
 ## Interfacing AVR driver using CMake
 ### Project tree
  <img src="/COTS/tree.png" alt="My Photo" /> 
 
- ### I applied CMake in this project in a way that it will be generic, that means that anytime you finished or wrote a driver, all you need to do just add it, you don't need to write CMakeLists.txt for every driver you will make 😉✌️ 
+ ### I applied CMake in this project in a way that it will be generic, that means that anytime you finished or wrote a driver, all you need to do is just add it, you don't need to write CMakeLists.txt for every driver you make  
 
 ## Steps for adding new driver 
 1. Open the Root CMakeLists.txt and call the macro **"create_driver_library(libraryNameYouWant Driver)"** to create your library for your new driver 
