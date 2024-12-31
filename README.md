@@ -1,6 +1,6 @@
 # AVR_Interfacing_Cmake 
 ## Interfacing AVR driver using CMake
-### Repo tree
+### Project tree
  <img src="/COTS/tree.png" alt="My Photo" /> 
 
  ### I applied CMake in this project in a way that it will be generic, that means that anytime you finished or wrote a driver, all you need to do just add it, you don't need to write CMakeLists.txt for every driver you will make 
@@ -13,5 +13,5 @@
 ## How to build? 
 cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=~/COTS/avr-gcc-toolchain.cmake
 cmake --build build 
-## for flashing "Check Task1 CMakeLists.txt"
+## For flashing "Check Task1 CMakeLists.txt"
 cmake --build build --target flash 
