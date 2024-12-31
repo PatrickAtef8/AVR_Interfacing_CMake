@@ -1,9 +1,9 @@
 # Macro to add a driver (source + include directory) to the library or target
 macro(add_driver target_name driver_name)
     # set paths to the driver source and include directory in two variables
-    set(driver_src "${CMAKE_SOURCE_DIR}/MCAL/MDIO/src/${driver_name}.c")
-    set(driver_src_cfg "${CMAKE_SOURCE_DIR}/MCAL/MDIO/src/${driver_name}_cfg.c")
-    set(driver_inc "${CMAKE_SOURCE_DIR}/MCAL/MDIO/inc")
+    set(driver_src "${CMAKE_SOURCE_DIR}/MCAL/${driver_name}/src/${driver_name}.c")
+    set(driver_src_cfg "${CMAKE_SOURCE_DIR}/MCAL/${driver_name}/src/${driver_name}_cfg.c")
+    set(driver_inc "${CMAKE_SOURCE_DIR}/MCAL/${driver_name}/inc")
     set(Common_inc "${CMAKE_SOURCE_DIR}/Common")
 
     # Add the source file and include directory to the specified target for driver and common directories
