@@ -1,63 +1,9 @@
 # AVR_Interfacing_CMake 
 ## Interfacing AVR driver using CMake
 ### Project tree
-├── COTS
-│   ├── APP
-│   │   ├── LAB1
-│   │   ├── LAB2
-│   │   │   ├── Task1
-│   │   │   │   ├── CMakeLists.txt
-│   │   │   │   └── main.c
-│   │   │   └── Task2
-│   │   │       ├── CMakeLists.txt
-│   │   │       └── main.c
-│   │   ├── LAB3
-│   │   │   └── Task1
-│   │   │       ├── CMakeLists.txt
-│   │   │       └── main.c
-│   │   └── SwitchLedTest_with_MPORT
-│   │       ├── CMakeLists.txt
-│   │       └── main.c
-│   ├── avr-gcc-toolchain.cmake
-│   ├── CMakeLists.txt
-│   ├── Common
-│   │   ├── BIT_MATH.h
-│   │   ├── MemMap.h
-│   │   └── STD_TYPES.h
-│   ├── Drivers.cmake
-│   ├── HAL
-│   │   ├── LED
-│   │   │   ├── inc
-│   │   │   │   ├── LED_cfg.h
-│   │   │   │   └── LED.h
-│   │   │   └── src
-│   │   │       ├── LED.c
-│   │   │       └── LED_cfg.c
-│   │   └── SWITCH
-│   │       ├── inc
-│   │       │   ├── SWITCH_cfg.h
-│   │       │   └── SWITCH.h
-│   │       └── src
-│   │           ├── SWITCH.c
-│   │           └── SWITCH_cfg.c
-│   ├── MCAL
-│   │   ├── MDIO
-│   │   │   ├── inc
-│   │   │   │   ├── MDIO_cfg.h
-│   │   │   │   └── MDIO.h
-│   │   │   └── src
-│   │   │       ├── MDIO.c
-│   │   │       └── MDIO_cfg.c
-│   │   └── MPORT
-│   │       ├── inc
-│   │       │   ├── MPORT_cfg.h
-│   │       │   └── MPORT.h
-│   │       └── src
-│   │           ├── MPORT.c
-│   │           └── MPORT_cfg.c
-│   ├── STD_LIB
-│   └── tree.png
-└── README.md
+
+<img src="/COTS/Project_Tree.png" alt="My Photo" style="width:40%; height:auto;" />
+
 
  ### I applied CMake in this project in a way that it will be generic, that means that anytime you finished or wrote a driver, all you need to do just add it, you don't need to write CMakeLists.txt for every driver you will make 😉✌️ 
 ## Steps for adding new driver 
