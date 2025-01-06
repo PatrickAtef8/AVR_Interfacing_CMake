@@ -2,7 +2,7 @@
 ## Interfacing AVR driver using CMake
 ### Project tree
 
-<img src="/COTS/Tree.png" alt="My Photo" style="width:40%; height:auto;" />
+<img src="/COTS/Project_Tree.png" alt="My Photo" style="width:40%; height:auto;" />
 
 
  ### I applied CMake in this project in a way that it will be generic, that means that anytime you finished or wrote a driver, all you need to do just add it, you don't need to write CMakeLists.txt for every driver you will make 😉✌️ 
