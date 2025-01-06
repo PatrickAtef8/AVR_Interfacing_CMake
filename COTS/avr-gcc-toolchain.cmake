@@ -3,7 +3,7 @@ set(CMAKE_SYSTEM_NAME Generic)
 
 set(MCU atmega32) 	# to choose your mcu
 set(PROGRAMMER usbasp) # to set the programmer if changed
-set(USB_PORT /dev/ttyUSB0) # to set the USB port that you are connecting
+set(USB_PORT /dev/ttyS4) # to set the USB port that you are connecting
 set(BaudRate 9600) # to specify the baud rate
 
 
