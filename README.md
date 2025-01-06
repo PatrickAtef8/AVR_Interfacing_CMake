@@ -1,4 +1,4 @@
-# AVR_Interfacing_Cmake 
+# AVR_Interfacing_CMake 
 ## Interfacing AVR driver using CMake
 ### Project tree
 ├── COTS
