@@ -1,5 +1,5 @@
 # AVR_Interfacing_CMake 
-## Interfacing AVR driver using CMake
+## Interfacing AVR drivers using CMake
 ### Project tree
 
 <img src="/COTS/ProjectTree.png" alt="My Photo" style="width:40%; height:auto;" />
