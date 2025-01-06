@@ -38,11 +38,6 @@ typedef enum
 	TOTAL_PIN	
 	}Pin_Num;
 
-typedef enum{
-	 OUTPUT=0x00,
-	 INPUT_PULLUP,
-	 INPUT_PULLDOWN
-}DIO_PinStatus;
 
 typedef enum
 {
@@ -50,11 +45,6 @@ typedef enum
 	ALL_HIGH = 0xFF
 }DIO_PortVoltage_type;
 
-typedef enum
-{
-	PORT_OUTPUT = 0xFF,
-	PORT_INPUT = 0x00,
-} DIO_PortStatus;
 
 typedef enum{
 	LOW=0,
@@ -63,11 +53,6 @@ typedef enum{
 
 
 
-
-void MDIO_vInit(void);
-extern const DIO_PinStatus PinCfg_array[TOTAL_PIN];
-MDIO_enuErrorStatus_t MDIO_enuSetPinConfigration(Port_Num Copy_enuPortNum,Pin_Num Copy_enuPinNum,DIO_PinStatus Copy_enuConfigration);
-MDIO_enuErrorStatus_t MDIO_enuSetPortConfigration(Port_Num Copy_enuPortNum,DIO_PortStatus Copy_enuConfigration);
 MDIO_enuErrorStatus_t MDIO_enuSetPinValue(Port_Num Copy_enuPortNum, Pin_Num Copy_enuPinNum,DIO_PinVoltage_type Copy_enuState);
 MDIO_enuErrorStatus_t MDIO_enuSetPortValue(Port_Num Copy_enuPortNum,DIO_PortVoltage_type Copy_enuPortState);
 MDIO_enuErrorStatus_t MDIO_enuGetPinValue(Port_Num  Copy_enuPortNum,Pin_Num Copy_enuPinNum, u8* Add_pu8PinValue);
