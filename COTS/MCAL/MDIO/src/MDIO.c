@@ -6,146 +6,146 @@
 
 MDIO_enuErrorStatus_t RET_enuError =MDIO_OK;
 
-MDIO_enuErrorStatus_t MDIO_enuSetPinConfigration(Port_Num Copy_enuPortNum,Pin_Num Copy_enuPinNum,DIO_PinStatus Copy_enuConfigration)
-{
-	MDIO_enuErrorStatus_t RET_enuError =MDIO_OK;
-	if(Copy_enuPortNum > MDIO_PORTD)
-	{
-	        RET_enuError=MDIO_NOK;
-	}
-	else if (Copy_enuPinNum > 7)
-	{
-			RET_enuError=MDIO_NOK;
-	}
+// MDIO_enuErrorStatus_t MDIO_enuSetPinConfigration(Port_Num Copy_enuPortNum,Pin_Num Copy_enuPinNum,DIO_PinStatus Copy_enuConfigration)
+// {
+// 	MDIO_enuErrorStatus_t RET_enuError =MDIO_OK;
+// 	if(Copy_enuPortNum > MDIO_PORTD)
+// 	{
+// 	        RET_enuError=MDIO_NOK;
+// 	}
+// 	else if (Copy_enuPinNum > 7)
+// 	{
+// 			RET_enuError=MDIO_NOK;
+// 	}
 	
-	else
-	switch(Copy_enuConfigration)
-	{
+// 	else
+// 	switch(Copy_enuConfigration)
+// 	{
 		
-	case OUTPUT:
+// 	case OUTPUT:
 	
-	switch(Copy_enuPortNum)
-	{
+// 	switch(Copy_enuPortNum)
+// 	{
 		
-	case MDIO_PORTA:
+// 	case MDIO_PORTA:
 	
-	SET_BIT(DDRA,Copy_enuPinNum);
+// 	SET_BIT(DDRA,Copy_enuPinNum);
 	
-	break;
+// 	break;
 	
-	case MDIO_PORTB:
+// 	case MDIO_PORTB:
 	
-	SET_BIT(DDRB,Copy_enuPinNum);
+// 	SET_BIT(DDRB,Copy_enuPinNum);
 	
-	break;
+// 	break;
 	
-	case MDIO_PORTC:
-	SET_BIT(DDRC,Copy_enuPinNum);
+// 	case MDIO_PORTC:
+// 	SET_BIT(DDRC,Copy_enuPinNum);
 	
-	break;
+// 	break;
 	
-	case MDIO_PORTD:
-	SET_BIT(DDRD,Copy_enuPinNum);
-	break;
-}
-break;
+// 	case MDIO_PORTD:
+// 	SET_BIT(DDRD,Copy_enuPinNum);
+// 	break;
+// }
+// break;
 
-case INPUT_PULLUP:
-switch(Copy_enuPortNum)
-{
-	case MDIO_PORTA:
+// case INPUT_PULLUP:
+// switch(Copy_enuPortNum)
+// {
+// 	case MDIO_PORTA:
 	
-	CLR_BIT(DDRA,Copy_enuPinNum);
-	SET_BIT(PORTA,Copy_enuPinNum);
-	break;
+// 	CLR_BIT(DDRA,Copy_enuPinNum);
+// 	SET_BIT(PORTA,Copy_enuPinNum);
+// 	break;
 	
-	case MDIO_PORTB:
+// 	case MDIO_PORTB:
 	
-	CLR_BIT(DDRB,Copy_enuPinNum);
-	SET_BIT(PORTB,Copy_enuPinNum);
-	break;
+// 	CLR_BIT(DDRB,Copy_enuPinNum);
+// 	SET_BIT(PORTB,Copy_enuPinNum);
+// 	break;
 	
-	case MDIO_PORTC:
+// 	case MDIO_PORTC:
 	
-	CLR_BIT(DDRC,Copy_enuPinNum);
-	SET_BIT(PORTC,Copy_enuPinNum);
-	break;
-	case MDIO_PORTD:
+// 	CLR_BIT(DDRC,Copy_enuPinNum);
+// 	SET_BIT(PORTC,Copy_enuPinNum);
+// 	break;
+// 	case MDIO_PORTD:
 	
-	CLR_BIT(DDRD,Copy_enuPinNum);
-	SET_BIT(PORTD,Copy_enuPinNum);
-	break;
-	}
-	break;
+// 	CLR_BIT(DDRD,Copy_enuPinNum);
+// 	SET_BIT(PORTD,Copy_enuPinNum);
+// 	break;
+// 	}
+// 	break;
 	
 	
-	case INPUT_PULLDOWN:
-	switch(Copy_enuPortNum)
-	{
-		case MDIO_PORTA:
+// 	case INPUT_PULLDOWN:
+// 	switch(Copy_enuPortNum)
+// 	{
+// 		case MDIO_PORTA:
 		
-		CLR_BIT(DDRA,Copy_enuPinNum);
-		CLR_BIT(PORTA,Copy_enuPinNum);
-		break;
+// 		CLR_BIT(DDRA,Copy_enuPinNum);
+// 		CLR_BIT(PORTA,Copy_enuPinNum);
+// 		break;
 		
-		case MDIO_PORTB:
+// 		case MDIO_PORTB:
 		
-		CLR_BIT(DDRB,Copy_enuPinNum);
-		CLR_BIT(PORTB,Copy_enuPinNum);
-		break;
+// 		CLR_BIT(DDRB,Copy_enuPinNum);
+// 		CLR_BIT(PORTB,Copy_enuPinNum);
+// 		break;
 		
-		case MDIO_PORTC:
+// 		case MDIO_PORTC:
 		
-		CLR_BIT(DDRC,Copy_enuPinNum);
-		CLR_BIT(PORTC,Copy_enuPinNum);
-		break;
-		case MDIO_PORTD:
+// 		CLR_BIT(DDRC,Copy_enuPinNum);
+// 		CLR_BIT(PORTC,Copy_enuPinNum);
+// 		break;
+// 		case MDIO_PORTD:
 		
-		CLR_BIT(DDRD,Copy_enuPinNum);
-		CLR_BIT(PORTD,Copy_enuPinNum);
-		break;
+// 		CLR_BIT(DDRD,Copy_enuPinNum);
+// 		CLR_BIT(PORTD,Copy_enuPinNum);
+// 		break;
 		
-	}
-	break;
-	}
-	return RET_enuError;
-}
+// 	}
+// 	break;
+// 	}
+// 	return RET_enuError;
+// }
 	
-MDIO_enuErrorStatus_t MDIO_enuSetPortConfigration(Port_Num Copy_enuPortNum,DIO_PortStatus Copy_enuConfigration)
-{ 
-	MDIO_enuErrorStatus_t RET_enuError =MDIO_OK;
-	if(Copy_enuPortNum > MDIO_PORTD)
-	{
-		RET_enuError=MDIO_NOK;
-	}
-else if ((Copy_enuConfigration != PORT_OUTPUT) && (Copy_enuConfigration != PORT_INPUT))
-{
-	RET_enuError= MDIO_NOK;
+// MDIO_enuErrorStatus_t MDIO_enuSetPortConfigration(Port_Num Copy_enuPortNum,DIO_PortStatus Copy_enuConfigration)
+// { 
+// 	MDIO_enuErrorStatus_t RET_enuError =MDIO_OK;
+// 	if(Copy_enuPortNum > MDIO_PORTD)
+// 	{
+// 		RET_enuError=MDIO_NOK;
+// 	}
+// else if ((Copy_enuConfigration != PORT_OUTPUT) && (Copy_enuConfigration != PORT_INPUT))
+// {
+// 	RET_enuError= MDIO_NOK;
 	
-}
-	else
+// }
+// 	else
 	
-	switch (Copy_enuPortNum)
-	{
-		case MDIO_PORTA:
-		DDRA = Copy_enuConfigration;
-		break;
+// 	switch (Copy_enuPortNum)
+// 	{
+// 		case MDIO_PORTA:
+// 		DDRA = Copy_enuConfigration;
+// 		break;
 
-		case MDIO_PORTB:
-		DDRB = Copy_enuConfigration;
-		break;
+// 		case MDIO_PORTB:
+// 		DDRB = Copy_enuConfigration;
+// 		break;
 
-		case MDIO_PORTC:
-		DDRC = Copy_enuConfigration;
-		break;
+// 		case MDIO_PORTC:
+// 		DDRC = Copy_enuConfigration;
+// 		break;
 
-		case MDIO_PORTD:
-		DDRD = Copy_enuConfigration;
-		break;
-	}
+// 		case MDIO_PORTD:
+// 		DDRD = Copy_enuConfigration;
+// 		break;
+// 	}
 	
-return RET_enuError;
-}
+// return RET_enuError;
+// }
 
 MDIO_enuErrorStatus_t MDIO_enuSetPinValue(Port_Num Copy_enuPortNum, Pin_Num Copy_enuPinNum,DIO_PinVoltage_type Copy_enuState)
 {
@@ -300,21 +300,21 @@ MDIO_enuErrorStatus_t MDIO_enuGetPinValue(Port_Num  Copy_enuPortNum,Pin_Num Copy
 	return RET_enuError;
 }
 
-void MDIO_vInit(void)
- {
-	for (int pin = 0; pin < TOTAL_PIN; pin++) 
-	{
-		Port_Num port = pin / 8;  // Determine the port (0 -> PORTA, 1 -> PORTB, etc.)
-		u8 pin_num = pin % 8;          // Determine the pin number (0 -> 7)
+// void MDIO_vInit(void)
+//  {
+// 	for (int pin = 0; pin < TOTAL_PIN; pin++) 
+// 	{
+// 		Port_Num port = pin / 8;  // Determine the port (0 -> PORTA, 1 -> PORTB, etc.)
+// 		u8 pin_num = pin % 8;          // Determine the pin number (0 -> 7)
 
-		// Get the pin status from the PinCfg_array
+// 		// Get the pin status from the PinCfg_array
 		
-		DIO_PinStatus status = PinCfg_array[pin];
+// 		DIO_PinStatus status = PinCfg_array[pin];
 
-		// Set the pin configuration based on the status
-		MDIO_enuSetPinConfigration(port, pin_num, status);
-	}
-}
+// 		// Set the pin configuration based on the status
+// 		MDIO_enuSetPinConfigration(port, pin_num, status);
+// 	}
+// }
 
 //ar -x libMdio.a
 
